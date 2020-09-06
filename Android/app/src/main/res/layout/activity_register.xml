@@ -6,12 +6,12 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:background="#fff"
     android:paddingStart="45dp"
-    android:paddingEnd="45dp"
     tools:context=".MainActivity">
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:paddingEnd="45dp"
         android:orientation="vertical">
 
         <ImageView
@@ -62,8 +62,24 @@
             <com.google.android.material.textfield.TextInputEditText
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:textColor="#E6E4E4"
                 android:id="@+id/email_input"
+                android:fontFamily="@font/roboto_medium"
+                android:backgroundTint="@color/colorPrimaryDark"/>
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Name"
+            android:layout_marginTop="10dp"
+            android:textColorHint="@color/colorPrimaryDark"
+            app:hintTextColor="@color/colorPrimaryDark">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:id="@+id/name"
                 android:fontFamily="@font/roboto_medium"
                 android:backgroundTint="@color/colorPrimaryDark"/>
 
@@ -83,7 +99,6 @@
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:id="@+id/pass_input"
-                android:textColor="#E6E4E4"
                 android:fontFamily="@font/roboto_medium"
                 android:inputType="textPassword"
                 android:backgroundTint="@color/colorPrimaryDark"/>
@@ -97,23 +112,21 @@
             android:orientation="horizontal">
 
             <RadioButton
-                android:id="@+id/male"
+                android:id="@+id/customer_radio"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Customer"
                 android:checked="true"
-                android:onClick="onRadioButtonClicked"
                 android:textSize="16sp"
                 android:buttonTint="@color/colorPrimaryDark"
                 android:fontFamily="@font/roboto_medium"
                 android:textColor="@color/colorPrimaryDark"/>
 
             <RadioButton
-                android:id="@+id/female"
+                android:id="@+id/seller_radio"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Store Owner"
-                android:onClick="onRadioButtonClicked"
                 android:textSize="16sp"
                 android:buttonTint="@color/colorPrimaryDark"
                 android:fontFamily="@font/roboto_medium"
@@ -133,7 +146,6 @@
             <com.google.android.material.textfield.TextInputEditText
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:textColor="#E6E4E4"
                 android:id="@+id/phone"
                 android:fontFamily="@font/roboto_medium"
                 android:backgroundTint="@color/colorPrimaryDark"/>
@@ -160,7 +172,7 @@
             android:text="Register"
             android:textSize="24sp"
             android:textAllCaps="false"
-            android:id="@+id/login_btn"
+            android:id="@+id/register_btn"
             android:fontFamily="@font/roboto_medium"
             android:background="@drawable/button_back"/>
 
@@ -210,7 +222,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:textColor="@color/colorPrimaryDark"
-            android:text=" Login"
+            android:text=" Login\n"
             android:fontFamily="@font/roboto_medium"
             android:layout_toRightOf="@+id/t1"
             android:textSize="12sp"/>
