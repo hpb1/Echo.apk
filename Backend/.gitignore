@@ -1,0 +1,7 @@
+/backend/__pycache__
+/main/__pycache__
+/owner/__pycache__
+/main/migrations
+/owner/migrations
+/customer/__pycache__
+/customer/migrations
